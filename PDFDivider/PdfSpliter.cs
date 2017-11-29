@@ -1,6 +1,7 @@
 ﻿using iTextSharp.text;
 using iTextSharp.text.pdf;
 using System;
+using System.IO;
 
 namespace PDFDivider
 {
@@ -34,7 +35,7 @@ namespace PDFDivider
 
             _outputFilePath = outputPath;
 
-            System.IO.Directory.CreateDirectory(Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + "\\" + _outputFilePath);
+            System.IO.Directory.CreateDirectory(_outputFilePath);
 
             int lastPageSlipt = 1;
 
@@ -51,8 +52,7 @@ namespace PDFDivider
 
 
             _pdfDocument.Close();
-
-
+            //Directory.Delete(_outputFilePath, true);
         }
 
         private void JoinPdfPages(int startPage, int endPage)
@@ -61,7 +61,7 @@ namespace PDFDivider
 
 
             pdfCopyProvider = new PdfCopy(sourceDocument,
-                new System.IO.FileStream(Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + "\\" + _outputFilePath + "\\" + _numberOfSlipts + "_" + _inputFilePath, System.IO.FileMode.Create));
+                new System.IO.FileStream(_outputFilePath + "\\" + _numberOfSlipts + "_" + _inputFilePath, System.IO.FileMode.Create));
 
             sourceDocument.Open();
 
@@ -69,6 +69,14 @@ namespace PDFDivider
             {
                 importedPage = pdfCopyProvider.GetImportedPage(_pdfDocument, i);
                 pdfCopyProvider.AddPage(importedPage);
+                FileInfo n = new FileInfo(_outputFilePath + "\\" + _numberOfSlipts + "_" + _inputFilePath);
+
+                Console.WriteLine(_outputFilePath + "\\" + _numberOfSlipts + "_" + _inputFilePath + " " + n.Length + " " + pdfCopyProvider.PageNumber);
+
+                if (n.Length > 20971520 && pdfCopyProvider.PageNumber % 2 != 0)
+                {
+                    break;
+                }
 
             }
 

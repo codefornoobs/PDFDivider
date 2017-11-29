@@ -1,4 +1,5 @@
 ﻿using PDFDivider;
+using System;
 
 namespace Program
 {
@@ -10,6 +11,8 @@ namespace Program
 
             lol.Load("Blogging_Course_Workbook_v2.pdf");
             lol.SplitDocumentInto("lol", 2);
+
+            Console.ReadKey();
         }
     }
 }
