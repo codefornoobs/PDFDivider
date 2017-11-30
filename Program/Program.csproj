@@ -48,11 +48,5 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\PDFDivider\PDFDivider.csproj">
-      <Project>{33f0e31d-421c-4ec4-a348-f19de1409802}</Project>
-      <Name>PDFDivider</Name>
-    </ProjectReference>
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
