@@ -12,10 +12,10 @@ namespace website.Controllers
         {
             return new string[] { "value2", "value1" };
         }
-        [HttpPost]
-        public string Post(int id)
+        [HttpPost()]
+        public string Post(string id)
         {
-            return id.ToString();
+            return id;
         }
     }
 }
