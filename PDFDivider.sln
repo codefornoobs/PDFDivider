@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26730.16
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "website", "website\website.csproj", "{AA00B245-2D85-4D40-BED8-30835E748E44}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PdfDividerNuget", "PdfDividerNuget\PdfDividerNuget.csproj", "{DD4A7A0C-C68B-449A-9E32-D77923F628EA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +11,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{AA00B245-2D85-4D40-BED8-30835E748E44}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{AA00B245-2D85-4D40-BED8-30835E748E44}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{AA00B245-2D85-4D40-BED8-30835E748E44}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{AA00B245-2D85-4D40-BED8-30835E748E44}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DD4A7A0C-C68B-449A-9E32-D77923F628EA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DD4A7A0C-C68B-449A-9E32-D77923F628EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DD4A7A0C-C68B-449A-9E32-D77923F628EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DD4A7A0C-C68B-449A-9E32-D77923F628EA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
